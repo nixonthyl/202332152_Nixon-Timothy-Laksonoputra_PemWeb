@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="id"> <!-- Declaration of HTML document type and Indonesian language -->
+<head>
+    <meta charset="UTF-8"> <!-- Sets the character encoding to UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Ensures proper display on various screen sizes -->
+    <title>Registrasi Akun</title> <!-- Title of the webpage -->
+    
+    <style>
+        /* Styling for the body: sets font family and margin */
+        body {
+            font-family: "Times New Roman", Times, serif;
+            margin: 20px;
+        }
+        /* Styling the container with full width and left-aligned text */
+        .container {
+            width: 100%;
+            text-align: left;
+        }
+        /* Styling the form box with borders, padding, and position adjustments */
+        .form-box {
+            border: 1px solid black;
+            padding: 15px;
+            width: 100%;
+            box-sizing: border-box;
+            position: relative;
+        }
+        /* Styling the title within the form box */
+        .form-title {
+            font-weight: bold;
+            font-size: 16px;
+            position: absolute;
+            top: -10px; /* Positions the title above the form box */
+            left: 10px;
+            background: white; /* White background for clear visibility */
+            padding: 0 10px; /* Adds left and right padding */
+        }
+        /* Creating a horizontal line on the left side of the form title */
+        .form-title::before {
+            content: "";
+            position: absolute;
+            top: 50%; /* Aligns vertically */
+            left: -10px; /* Positions the line left of the title */
+            width: 10px;
+            height: 1px;
+            background: black;
+        }
+        /* Creating a horizontal line on the right side of the form title */
+        .form-title::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 100%;
+            width: calc(100% - 20px);
+            height: 1px;
+            background: black;
+        }
+        /* Adds spacing below the form title to separate it from other elements */
+        .form-title-spacing {
+            height: 20px;
+        }
+        /* Adds margin between form groups to reduce spacing */
+        .form-group {
+            margin-bottom: 10px;
+        }
+        /* Adds right margin to labels inside form groups */
+        .form-group label {
+            display: inline-block;
+            margin-right: 10px;
+        }
+        /* Styles gender radio buttons with flex display and gap between them */
+        .gender-group {
+            display: flex;
+            gap: 15px; /* Space between radio buttons */
+            margin-top: 5px; /* Adds space between label and buttons */
+        }
+        /* Styling for input and select fields */
+        input, select {
+            font-family: "Times New Roman", Times, serif;
+            border: 1px solid #ccc; /* Light gray border */
+            padding: 5px;
+        }
+        /* Styling for placeholder text inside input fields */
+        input::placeholder {
+            color: black;
+            opacity: 0.6; /* Reduces placeholder opacity */
+        }
+        /* Styling for the submit button */
+        button {
+            margin-top: 10px; /* Space above the button */
+            padding: 5px 10px;
+            font-family: "Times New Roman", Times, serif;
+        }
+    </style>
+</head>
+<body>
+    <div class="container"> <!-- Wrapper to contain all content -->
+        <h1><b>Registrasi Akun</b></h1> <!-- Main heading of the form -->
+        <div class="form-box"> <!-- Box containing the registration form -->
+            <div class="form-title">Formulir Registrasi</div> <!-- Title inside the form box -->
+            <div class="form-title-spacing"></div> <!-- Space below the form title -->
+            
+            <form> <!-- Start of the registration form -->
+                <div class="form-group">
+                    <label>Masukkan nama:</label> 
+                    <input type="text" placeholder="Nixon Timothy Laksonoputra"> <!-- Text input for name -->
+                </div>
+                
+                <div class="form-group">
+                    <label>Masukkan NIM:</label> 
+                    <input type="text" placeholder="202332152"> <!-- Text input for NIM -->
+                </div>
+                
+                <div class="form-group">
+                    <label>Masukkan email:</label> 
+                    <input type="email" placeholder="coconutsz443@gmail.com"> <!-- Email input field -->
+                </div>
+
+                <div class="form-group">
+                    <label>Jenis Kelamin:</label> 
+                    <div class="gender-group"> <!-- Group for gender radio buttons -->
+                        <input type="radio" name="gender" id="laki" checked> <!-- Male radio button -->
+                        <label for="laki">Laki-Laki</label> <!-- Label for male option -->
+
+                        <input type="radio" name="gender" id="perempuan"> <!-- Female radio button -->
+                        <label for="perempuan">Perempuan</label> <!-- Label for female option -->
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Agama:</label> 
+                    <select> <!-- Dropdown menu for religion selection -->
+                        <option>Islam</option>
+                        <option selected>Kristen</option> <!-- Default selected religion -->
+                        <option>Katolik</option>
+                        <option>Hindu</option>
+                        <option>Budha</option>
+                        <option>Konghucu</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label>Masukkan password:</label> 
+                    <input type="password" placeholder="admin123"> <!-- Password input field -->
+                </div>
+
+                <div class="form-group">
+                    <label>Konfirmasi password:</label> 
+                    <input type="password"> <!-- Password confirmation input field -->
+                </div>
+
+                <button type="submit">Daftar</button> <!-- Submit button -->
+            </form>
+        </div>
+    </div>
+</body>
+</html>
